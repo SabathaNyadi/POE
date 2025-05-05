@@ -22,8 +22,6 @@ Structured my webpage and how i want it to appeal
 7th April 2025  
 Final adjustments before submission.  
 
-
-
 Changelog/edits 
 1.on my proposel i changed my fonts family from Aptos to Arail 
   also changed my font size from 11 to 13px for visability 
@@ -35,9 +33,6 @@ Changelog/edits
    for example i added my navigation bar code before the image i used.
 4. refrenced the information  and also the pictures used on the website.
 5. add a new refrence for the picture i used in the background 
-
-
-
 
 REFERENCES
 Abalindi Welfare Society,2022. Abalindi home. [online] Available at: < abalindi.org.za/index.php > [Accessed 04 March 2025]. 
