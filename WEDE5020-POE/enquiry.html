@@ -1,37 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-</nav><nav>
-    <div class="topnav">
-    <ul class="nav-links">
-    <a class="active"
- href="home.html">Home</a></li>
- <a href="service.html">Service</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="donations.html">Donations</a> 
-    </div>
-    <img src="images/abalindi.png">
-</nav>
-<head><b> Enquiry Form</b>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enquiry-form</title>
-</head>
+    <meta name="description" content="Enquiry form for Abalindi Welfare Society. Contact us with your questions and messages.">
+    <meta name="author" content="AbalindiWelfareSociety">
+    <title>Abalindi Welfare Society - Enquiry</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .navbar {
+            background-color: rgb(0, 128, 255);
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: black;
+            color: white; 
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form textarea {
+            width: calc(100% - 20px); 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        form textarea {
+            resize: vertical; 
+            min-height: 100px;
+        }
+        form input[type="submit"] {
+            background-color: rgb(0, 128, 255);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form input[type="submit"]:hover {
+            background-color: rgb(0, 90, 180);
+        }
+    </style>
+</head>
 <body>
-    <form id="enquiry-form">
-        <label for="name">Name:</label><!--this was to create the enquiry form and the label tag was used to how you want the information wanted to be labled -->
-        <input type="text" id="name"
-    name="name"><br><br>
-        <label for="email">Email:</label> 
-        <input type="tel" id="phone"   
-    name="phone"><br><br>
-        <label for="message">Message:</label>   
-        <textarea id="message"
-    name="message"></textarea><br><br> 
-        <input type="submit"
-        value="Submit"> 
-    </form>
+    <header>
+        <input type="text" id="searchInput" placeholder="Search page content..." aria-label="Search content on this page" />
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="donations.html">Donations</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/AbalindiWelfareSociety" target="_blank" aria-label="Visit Abalindi Welfare Society on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abalindi_welfare" target="_blank" aria-label="Visit Abalindi Welfare Society on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <h1>Enquiry Form</h1>
+        <img src="images/abalindi.png" alt="Abalindi Welfare Society logo" width="150" height="150">
+    </header>
+
+    <main>
+        <form id="enquiry-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /> <label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Abalindi Welfare Society. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+            const filter = searchInput.value.toLowerCase();
+            const mainContent = document.querySelector('main'); 
+            if (mainContent) {
+                if (mainContent.textContent.toLowerCase().includes(filter)) {
+                    mainContent.style.display = ""; 
+                } else {
+                }
+            }
+        });
+
+        document.getElementById("enquiry-form").addEventListener("submit", function(e) {
+            const emailInput = document.getElementById("email");
+            const email = emailInput.value;
+
+            
+            if (!email.endsWith("@gmail.com")) {
+                alert("Please enter a valid Gmail address (e.g., yourname@gmail.com).");
+                e.preventDefault(); 
+                emailInput.focus(); 
+            }
+        });
+    </script>
 </body>
 </html>

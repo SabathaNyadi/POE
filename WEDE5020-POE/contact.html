@@ -1,38 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-</nav><nav>
-    <div class="navbar">
-    <ul class="nav-links">
-    <a class="active"
- href="home.html">Home</a></li>
- <a href="service.html">Service</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="donations.html">Donations</a> 
-    </div>
-</nav>
-<head><b>Contact Details</b>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact information</title>
-   <hr> <img src="images/abalindi.png"> </head>
+    <meta name="description" content="Contact information for Abalindi Welfare Society, including physical address, postal address, email, and phone number.">
+    <meta name="author" content="AbalindiWelfareSociety">
+    <title>Abalindi Welfare Society - Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Navbar styles for consistency */
+        .navbar {
+            background-color: rgb(0, 128, 255);
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        /* Corrected hover selector: no space between a and :hover */
+        .navbar a:hover {
+            background-color: black;
+            color: white; /* Changed for better visibility */
+        }
+        
+        /* Specific styles for contact details for readability */
+        .contact-info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-info h2, .contact-info h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        .contact-info a {
+            color: rgb(0, 128, 255);
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: rgb(0, 128, 255);
+            color: white;
+            border-radius: 5px;
+        }
+        .map-link:hover {
+            background-color: rgb(0, 90, 180);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<p><b>Physical Address</b>
+    <header>
+        <input type="text" id="searchInput" placeholder="Search contact..." aria-label="Search contact information" />
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="donations.html">Donations</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/AbalindiWelfareSociety" target="_blank" aria-label="Visit Abalindi Welfare Society on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abalindi_welfare" target="_blank" aria-label="Visit Abalindi Welfare Society on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <h1>Contact Details</h1>
+        <hr> <img src="images/abalindi.png" alt="Abalindi Welfare Society logo" width="150" height="150">
+    </header>
+
+    <main class="contact-info"> <div class="search-item"> <header><b>Physical Address</b></header>
 </p>
 <p> 50 Johan Nxumalo</p>
 <p>Amatikwe Main Bus route</p>
 <p>Near Ithwelenye School</p>
 <P>INANDA</P>
 <p>4309</p>
+            <a class="map-link"
+                href="https://www.google.com/maps/search/50+Johan+Nxumalo+Amatikwe" 
+                target="_blank" aria-label="View our location on Google Maps">
+                View Our Location on Google Maps
+            </a>
+        </div>
 
-<p><b>Postal Address</b></p>
+        <div class="search-item"> <header><b>Postal Address</b></header>
 <p>P.O Box 43319</p>
 <p>INANDA</p>
 <p>4310</p>
+        </div>
 
-<p>Email:</p><p><a href="mailto:info@abalindi.org">info@abalindi.org</a></p> <!--href was used to create a link for the email so people can click and send someone straigh to the email-->
-<p>Cellphone number:</p><p> 031 510 1538</p>
+        <div class="search-item"><header><b>Contact Us</b></header>
+<h3>Email:</h3><p><a href="mailto:info@abalindi.org">info@abalindi.org</a></p> <!--href was used to create a link for the email so people can click and send someone straigh to the email-->
+<h4>Cellphone number:</h4><p> 031 510 1538</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Abalindi Welfare Society. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+            const filter = searchInput.value.toLowerCase();
+            const items = document.querySelectorAll(".search-item"); 
+
+            items.forEach(item => {
+                const text = item.textContent || item.innerText; 
+                if (text.toLowerCase().includes(filter)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none"; 
+                }
+            });
+        });
+        
+    </script>
 </body>
 </html>

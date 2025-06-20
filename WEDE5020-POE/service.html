@@ -1,42 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-</nav><nav>
-    <div class="topnav">
-    <ul class="nav-links">
-    <a class="active"
- href="home.html">Home</a></li>
-<a href="service.html">Service</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="donations.html">Donations</a> 
-    </div>
-</nav>
-<head>  
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <img src="images/abalindi.png">
-    <head><b>Our Services</b> </head> 
-</head>
-<body>  
-    <P>Abalindi offers a variety of Services from helping people of a very young age to a very eldlerly age from education to health it is our biggest goal to help people in what ever eay we can below you will find different ways we do that  </P>
-     
-    <p><b>Old Age Home</b></p>
-    <p>Abalindi Welfare society provides alot of services in the organization such as taking care of the elderly by providing health care facilities, personal care , accommodation and many activities that can help them with their health  </p>
-    <img src="images/service.jpg" alt="image" width="250" height="200">
-    <img src="images/old age home.jpg" alt="image" width="250" height="200">
-     <p><b>Childrens Sea Home</b></p>
-     <p>Childrens sea home caters for Children at the age of 0-18 years,Abalindi Welfare provide accommodation,health care facilities and Education in  nearby schools we also offer activities such as soccer and Netaball to the kids to keep themselves busy. </p>
-     <img src="images/sea home 2.jpg" alt="image" width="250" height="200">
-     <img src="images/33.jpg" alt="image" width="250" height="200">
+    <meta name="description" content="Services offered by Abalindi Welfare Society, including Old Age Home, Children's Sea Home, and Thokozani Creche.">
+    <meta name="author" content="AbalindiWelfareSociety">
+    <title>Abalindi Welfare Society - Services</title>
 
-     <p><b>Thokozani Creche</b></p>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .navbar {
+            background-color: rgb(0, 128, 255);
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: black;
+            color: white; 
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="text" id="searchInput" placeholder="Search services..." aria-label="Search services on this page" />
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="donations.html">Donations</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/AbalindiWelfareSociety" target="_blank" aria-label="Visit Abalindi Welfare Society on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abalindi_welfare" target="_blank" aria-label="Visit Abalindi Welfare Society on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <h1>Our Services</h1>
+        <img src="images/abalindi.png" alt="Abalindi Welfare Society logo" width="150" height="150">
+    </header>
+
+    <main>
+        <p>Abalindi offers a variety of services, from helping people of a very young age to a very elderly age. From education to health, it is our biggest goal to help people in whatever way we can. Below you will find different ways we do that:</p>
+
+        <div class="search-item"> <header><b>Old Age Home</b></header>
+    <p>Abalindi Welfare society provides alot of services in the organization such as taking care of the elderly by providing health care facilities, personal care , accommodation and many activities that can help them with their health  </p>
+            <img src="images/service.jpg" alt="Image of the elderly having a race activity" width="250" height="200" onclick="openLightbox(this)">
+            <img src="images/old age home.jpg" alt="Image of the elderly sitting and receiving presents" width="250" height="200" onclick="openLightbox(this)">
+        </div>
+
+        <div class="search-item"><header><b>Childrens Sea Home</b></header>
+     <p>Childrens sea home caters for children at the age of 0-18 years,Abalindi Welfare provide accommodation,health care facilities and Education in nearby schools we also offer activities such as soccer and netball to the kids to keep themselves busy. </p>
+            <img src="images/sea home 2.jpg" alt="Image of children out in the mountain after a hike" width="250" height="200" onclick="openLightbox(this)">
+            <img src="images/33.jpg" alt="Image of children receiving presents" width="250" height="200" onclick="openLightbox(this)">
+        </div>
+
+        <div class="search-item"> <header><b>Thokozani Creche</b></header>
      <p>Abalindi welfare offer a Daycare centre called the Thokozani Creche they offer this service to the community it is one of the forms
-        they generate fumds for the programs that they have.
+        they generate funds for the programs that they have also helping the children to get the necessary education needed.
      </p>
-<img src="images/thokozani.jpg" alt="image" width="250" height="200">
- <img src="images/services.png" alt="image" width="250" height="200">
- <img src="images/sea home.jpg" alt="image" width="250" height="200">
-    
+            <img src="images/thokozani.jpg" alt="Image of the outside building of Thokozani Creche" width="250" height="200" onclick="openLightbox(this)">
+            <img src="images/services.png" alt="Image of Thokozani Creche children learning outside" width="250" height="200" onclick="openLightbox(this)">
+            <img src="images/sea home.jpg" alt="Image of the building of the Sea Home" width="250" height="200" onclick="openLightbox(this)">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Abalindi Welfare Society. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Lightbox Image">
+    </div>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+            const filter = searchInput.value.toLowerCase();
+            const items = document.querySelectorAll(".search-item"); 
+
+            items.forEach(item => {
+                const text = item.textContent || item.innerText;
+                if (text.toLowerCase().includes(filter)) {
+                    item.style.display = ""; 
+                } else {
+                    item.style.display = "none"; 
+                }
+            });
+        });
+
+        
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+
+            if (lightbox && lightboxImg) {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            } else {
+                console.error("Lightbox or lightbox image element not found!");
+            }
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            if (lightbox) {
+                lightbox.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

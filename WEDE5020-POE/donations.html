@@ -1,40 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-</nav><nav>
-    <div class="topnav">
-    <ul class="nav-links">
-    <a class="active"
- href="home.html">Home</a></li>
-<a href="service.html">Service</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="donations.html">Donations</a> 
-    </div>
-    <img src="images/abalindi.png">
-</nav>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donations</title>
-    <head><b>Donations</b></head>
+    <meta name="description" content="Support Abalindi Welfare Society through donations of food, clothes, time, or cash. Every contribution helps further our mission.">
+    <meta name="author" content="AbalindiWelfareSociety">
+    <title>Abalindi Welfare Society - Donations</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .navbar {
+            background-color: rgb(0, 128, 255);
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        
+        .lightbox {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .lightbox-content {
+            margin: auto; 
+            display: block; 
+            max-width: 80%; 
+            max-height: 80%;
+            object-fit: contain; 
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        
+        .donation-story {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .donation-story:last-child {
+            border-bottom: none;
+        }
+        .donation-story p {
+            font-weight: bold; 
+            margin-bottom: 10px;
+        }
+        .donation-story img {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <p>Abalindi welfare society openly welcomes donations that would help us further our project and help those who are in 
-        need in our community, every contribution big or small helps us continue our mission to make an impact to peoples lives so please help us change peoples lives 
-    
-        You could help by:
-        <ol>Donating food and clothes</ol>
-        <ol>Volunteer time</ol>
-        <ol>Cash donations</ol>
-    </p>
-   <p>When donating you can make it clear on which project you are choosing to donate to with Old Age Home, Thokozani Creche and Childrens home being your three options </p>
+    <header>
+        <input type="text" id="searchInput" placeholder="Search Donations..." aria-label="Search donations content" />
 
-    <b><p>ACCORD staff in partnership with Gandhi Development trust to dedicate their 67 minutes of community service  </p></b>
-    <img src="images/accord.jpg" alt="image" width="300" height="250"> 
-   <b><p>Odwa Ndungane with the Hollywood Foundation donating Geysars to the old age home </p></b>
-    <img src="images/hollywood bets.jpg"> <img src="images/hollywood bets2.jpg" alt="image" width="250" height="200">
-   <b><p>Youth for Christ donating food and essential items to the childrens home in 2025</p></b> 
-    <img src="images/youth in christ.jpg" alt="image" width="250" height="200">
+        <nav class="navbar"> 
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="donations.html">Donations</a> 
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/AbalindiWelfareSociety" target="_blank" aria-label="Visit Abalindi Welfare Society on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abalindi_welfare" target="_blank" aria-label="Visit Abalindi Welfare Society on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <h1>Donations</h1>
+        <img src="images/abalindi.png" alt="Abalindi Welfare Society logo" width="150" height="150">
+    </header>
+
+    <main>
+        <div class="search-item"> <p>Abalindi Welfare Society openly welcomes donations that would help us further our projects and help those who are in 
+                need in our community. Every contribution, big or small, helps us continue our mission to make an impact on people's lives, so please help us change lives.
+            </p>
+            <p>You could help by:</p>
+            <ol>
+                <li>Donating food and clothes</li>
+                <li>Volunteering time</li>
+                <li>Cash donations</li>
+            </ol>
+            <p>When donating, you can make it clear on which project you are choosing to donate to, with Old Age Home, Thokozani Creche, and Children's Home being your three options.</p>
+        </div>
+
+        <section class="donation-stories">
+            <div class="donation-story search-item"> <h3>ACCORD Staff Partnership</h3> <p>ACCORD staff in partnership with Gandhi Development trust dedicated their 67 minutes of community service (ACCORD, 2014).</p>
+                <img src="images/accord.jpg" alt="ACCORD staff in front of the Abalindi Welfare Society building" width="300" height="250" onclick="openLightbox(this)"> 
+            </div>
+
+            <div class="donation-story search-item">
+                <h3>Hollywood Foundation Donation</h3>
+                <p>Odwa Ndungane with the Hollywood Foundation donating geysers to the old age home (Hollywood Foundation, 2020).</p>
+                <img src="images/hollywood bets.jpg" alt="Hollywood Foundation employee on the premises" width="300" height="250" onclick="openLightbox(this)"> 
+                <img src="images/hollywood bets2.jpg" alt="Image of Hollywood Foundation staff donating 4 geysers" width="250" height="200" onclick="openLightbox(this)">
+            </div>
+
+            <div class="donation-story search-item">
+                <h3>Youth for Christ Contribution</h3>
+                <p>@youth_for_christ01 (2025) demonstrates Youth for Christ donating food and essential items to the children's home in 2025.</p> 
+                <img src="images/youth in christ.jpg" alt="Youth for Christ members in front of children holding up donated food parcels" width="250" height="200" onclick="openLightbox(this)">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Abalindi Welfare Society. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Lightbox Image">
+    </div>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+            const filter = searchInput.value.toLowerCase();
+            const items = document.querySelectorAll(".search-item"); 
+
+            items.forEach(item => {
+                const text = item.textContent || item.innerText; 
+                if (text.toLowerCase().includes(filter)) {
+                    item.style.display = ""; 
+                } else {
+                    item.style.display = "none"; 
+                }
+            });
+        });
+
+        
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            if (lightbox && lightboxImg) { 
+                lightbox.style.display = "flex"; 
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt; 
+            } else {
+                console.error("Lightbox or lightbox image element not found!"); 
+            }
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            if (lightbox) {
+                lightbox.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,58 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-</nav><nav>
-    <div class="topnav">
-    <ul class="nav-links">
-    <a class="active"
- href="home.html">Home</a></li>
-<a href="service.html">Service</a>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="donations.html">Donations</a> 
-    </div>
-</nav> <!--i used nav so that a navigation bar would appear while href indicates where they can find the pages-->
-<head> <b>Abalindi Welfare</b>
-    
-    <title> WEDE 5020-POE </title>
-    <img src="images/abalindi.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Non-profit organization based in Amatikwe, Provides welfare services, including care for the elderly, children, and community development projects.">
+    <meta name="author" content="AbalindiWelfareSociety">
+    <title>Abalindi Welfare Society - Home</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <style>
+        .navbar {
+            background-color: rgb(0, 128, 255);
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover { 
+            background-color: black;
+            color: white; 
+        }
+
+        
+        .lightbox {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .lightbox-content {
+            margin: auto; 
+            display: block; 
+            max-width: 80%; 
+            max-height: 80%;
+            object-fit: contain; 
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-    <hr/>
-        <p>Abalindi welfare society is a non-profit organization built in 1970 in the Amatikwe community based in Durbarn,KZN. 
-            The organization primarily focuses on people over the age of 60 who have been abused or not taken care of by their family members, after a few years they decided to include children in the society of the age of 0 – 18 years old referred by district social workers for the society to take care of them.  </p> 
-        
-        </p>
-            
-        <p>Abalindi welfare society has ventured into different business opportunities such as creating a well known bakery in the area in order to gain funds
-            for the organsation they further created a Creche known as the Thokozani Creche where the community could take their children to learn and they provide after care services. 
-        </p>
+    <header>
+        <input type="text" id="searchInput" placeholder="Search home..." aria-label="Search content on this page" />
 
-        <p>This intiative created job opportunities for the community which made the organsation realise how jobs were needed in the community 
-            so they decided to open 
-           <ol>Block making project</ol>
-           <ol>Sewing project</ol>
-            <ol>Emery Farming</ol> <!--ol is used to make a list -->
-        <p>The intiatives at Abalindi welfare society  focus on income generation and mainting ongoing projects</p>
- <header><b>HIV/AIDS epidemic</b></header> <!--b is used to make the text bold and i did to make it a subtopic-->      
+        <nav class="navbar"> <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="donations.html">Donations</a> 
+        </nav> <!--i used nav so that a navigation bar would appear while href indicates where they can find the pages-->
+
+        <div class="social-icons">
+            <a href="https://facebook.com/AbalindiWelfareSociety" target="_blank" aria-label="Visit Abalindi Welfare Society on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abalindi_welfare" target="_blank" aria-label="Visit Abalindi Welfare Society on Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <h1>Abalindi Welfare Society</h1> <img src="images/abalindi.png" alt="Abalindi Welfare Society logo" width="150" height="150" /> </header>
+
+    <main>
+        <hr/>
+        <div class="search-item"> <p>Abalindi Welfare Society is a non-profit organization established in 1970 in the Amatikwe community, based in Durban, KZN. 
+                The organization primarily focuses on people over the age of 60 who have been abused or not taken care of by their family members. After a few years, they decided to include children in the society, aged 0–18 years old, referred by district social workers, for the society to care for them. The organization 
+                showed its success and decided to create a creche which has also become successful. Abalindi Welfare is a very Christian-centered organization, to an extent that they host a Seventh-day Adventist church every Saturday, which is Amatikwe SDA church. They also welcome the Children of the Sea home and Abalindi Elders to come.
+            </p> 
+            <p>Abalindi Welfare Society has ventured into different business opportunities such as creating a well-known bakery in the area in order to gain funds
+                for the organization. They further created a Creche known as the Thokozani Creche where the community could take their children to learn, and they provide them with aftercare services. 
+            </p>
+            <p>This initiative created job opportunities for the community which made the organization realize how jobs were needed in the community. 
+                So they decided to open:
+                <ol>
+                    <li>Block making project</li>
+                    <li>Sewing project</li>
+                    <li>Emery Farming</li> 
+                </ol><!--ol is used to make a list -->
+            </p>
+            <p>The initiatives at Abalindi Welfare Society focus on income generation and maintaining ongoing projects (Abalindi Welfare, 2022).</p>
+        </div>
+
+        <div class="search-item">
+            <header><b>HIV/AIDS epidemic</b></header></div> <!--b is used to make the text bold and i did to make it a subtopic-->      
         <p> With the HIV/AIDS epidemic which has signficantly effected the black community the Abalindi welfare society decided to launch a support program, in this program people who are effected directly or indirectly 
             by HIV/AIDS are supported by recieving conseling, support group and it encourages those who are affected by it to join the programs that are offered by us
 
-            This program also invites parents who have lost their children due to HIV/AIDS, helping them deal withe thier loss and provide a community around them.
+            This program also invites parents who have lost their children due to HIV/AIDS, helping them deal withe thier loss and provide a community around them. (Abalindi welfare,2022)
         </p>
-<header><b>Vision</b></header>
+        </div>
+
+        <div class="search-item">
+           <header><b>Vision</b></header>
        <p>“To provide preventative and institutional services for the benefit of the aged, 
         disabled and children in need of social therapeutic and development care for all people” </p>  
-<header><b>Mission</b></header>
+        </div>
+        <div class="search-item">
+            <header><b>Mission</b></header>
        <p>“ Abalindi mission is to reach out to all communities in KZN promoting  
 
         The well-being of the elderly persons by providing comfort dignified treatment, health needs accommodation to those have a need  
         
-        Well-being to children who are destitute, orphaned or abandoned protecting them from any abuse promoting their schooling always preparing them for a better future, providing a residential facility for those needing it.” </p>     
+        Well-being to children who are destitute, orphaned or abandoned protecting them from any abuse promoting their schooling always preparing them for a better future, providing a residential facility for those needing it.” </p>  </div>   
+       
+        </div>
+        
+        <div class="gallery"> <img src="images/amatikwe.jpg" alt="Image of the corridor of Abalindi Welfare Society building" width="300" height="300" onclick="openLightbox(this)">
+            <img src="images/amatikwe 2.jpg" alt="Image of two employees walking the premises of Abalindi Welfare Society" width="300" height="300" onclick="openLightbox(this)"> 
+            <img src="images/amatikwe 3.jpg" alt="Image of the entrance of the Abalindi Welfare Society" width="300" height="300" onclick="openLightbox(this)">
+        </div>
 
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Abalindi Welfare Society. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Lightbox Image"> </div>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+            const filter = searchInput.value.toLowerCase();
+            const items = document.querySelectorAll(".search-item"); 
+
+            items.forEach(item => { 
+                const text = item.textContent || item.innerText; 
+                if (text.toLowerCase().includes(filter)) {
+                    item.style.display = ""; 
+                } else {
+                    item.style.display = "none"; 
+                }
+            });
+        });
+
+        
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            if (lightbox && lightboxImg) { 
+                lightbox.style.display = "flex"; 
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt; 
+            } else {
+                console.error("Lightbox or lightbox image element not found!");
+            }
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            if (lightbox) {
+                lightbox.style.display = "none"; 
+            }
+        }
+    </script>
 </body>
-<img src="images/amatikwe.jpg" alt="image" width="300" height="300"> <!--src is used to show where in the file will the images be extracted -->
-<img src="images/amatikwe 2.jpg" alt="images" width="300" height="300">
-<img src="images/amatikwe 3.jpg" alt="images" width="300" height="300">
 </html>
