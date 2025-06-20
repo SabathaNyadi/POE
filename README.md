@@ -33,6 +33,32 @@ Changelog/edits
    for example i added my navigation bar code before the image i used.
 4. refrenced the information  and also the pictures used on the website.
 5. add a new refrence for the picture i used in the background 
+Part 2
+
+
+Part 3
+Time and Milestones 
+10 June 
+made my enquiry form to show errors
+12 june 
+linked my social media icons
+15 June 
+created google maps link that will take you straight to the business 
+16 june 
+encounted problems with my linking 
+18 June 
+made my pictures interactive realised my code doesnt work
+19 June 
+researched about my problem and still could not figure it out 
+20 June Submission day 
+finally figured out the problem was within my tags and placement of my javaScript code
+Changlog and edits
+1. I changed my tags as i saw my javaScript was not funtoning.
+2. in my Enquiry form i changed the layout.
+3. enquiry form can now display errors.
+4. added social media icons.
+5. added a google maps under contact when you click it takes you there.
+6. added a search bar to search the content.
 
 REFERENCES
 Abalindi Welfare Society,2022. Abalindi home. [online] Available at: < abalindi.org.za/index.php > [Accessed 04 March 2025]. 
